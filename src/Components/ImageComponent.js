@@ -2,7 +2,7 @@ import React from 'react';
 
 const ImageComponent = props =>
     <li>
-        <img src="" alt="" />
+        <img src={props.url} alt="" />
     </li>
 
 export default ImageComponent;
