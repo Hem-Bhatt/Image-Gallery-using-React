@@ -3,8 +3,8 @@ import React from 'react';
 import ImageComponent from './ImageComponent.js';
 const PhotoContainer = props => {
 
-  let pics = props.data.map(data=>
-    <ImageComponent url = {data}/>
+  let pics = props.data.map((links,index)=>
+    <ImageComponent url = {links} key={index}/>
   )
 
     return(
