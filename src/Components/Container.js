@@ -3,12 +3,7 @@ import apiKey from './config.js';
 import axios from 'axios';
 import PhotoContainer from './PhotoContainer.js';
 
-
-
-
-
 export default class Container extends Component {
-
   constructor(props){
     super(props);
     this.state = {
@@ -16,7 +11,6 @@ export default class Container extends Component {
 
     };
   }
-
 
 makeApiCall=(tag)=>{
   axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${tag}&per_page=24&format=json&nojsoncallback=1`)
@@ -39,18 +33,14 @@ componentWillMount(props){
 }
 
 componentWillReceiveProps(nextProps){
-  console.log(nextProps.data);
+  // console.log(nextProps.data);
   var newTag = nextProps.data;
   this.makeApiCall(newTag);
  }
 
 render(){
-
-
     return(
       <PhotoContainer data={this.state.pics}/>
       );
     }
-  
-
 }

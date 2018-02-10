@@ -7,7 +7,7 @@ const PhotoContainer = props => {
     <ImageComponent url = {links} key={index}/>
   )
   if (pics.length === 0){
-    return(<Notfound/>)
+    return(<Notfound/ >)
   }
     else{
     return(

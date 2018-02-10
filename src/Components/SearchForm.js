@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Container from './Container.js';
 export default class SearchForm extends Component {
 
-
 constructor(){
       super();
       this.state = {
@@ -28,11 +27,8 @@ RenderSearch(value){
   //   console.log("Topic Searched",this.state);
    }
 
-
-
   // Render /${Inputvalue} on search
   render() {
-
     return (
       <div>
         <form className="search-form" onSubmit={this.handleSubmit}>
@@ -48,10 +44,9 @@ RenderSearch(value){
                <path d="M0 0h24v24H0z" fill="none"/>
              </svg>
            </button>
-
         </form>
         {/*calls the function to create the module that will fetch the data*/}
-        <h1> {this.state.data}</h1>
+        <h1>{this.state.data}</h1>
         {this.RenderSearch(this.state.data)}
       </div>
     );

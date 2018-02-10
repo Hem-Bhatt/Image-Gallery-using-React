@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 const NavMenu = props =>
     <nav className="main-nav">
       <ul>

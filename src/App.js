@@ -4,9 +4,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
-import axios from 'axios';
 import NavMenu from './Components/NavMenu.js';
-import PhotoContainer from './Components/PhotoContainer.js';
 import SearchForm from './Components/SearchForm.js';
 import Container from './Components/Container.js';
 import Notfound from './Components/Notfound.js';
@@ -21,9 +19,7 @@ class App extends Component {
   }
 
 
-
   render() {
-
     return (
       <BrowserRouter>
         <div className="container">
@@ -39,7 +35,6 @@ class App extends Component {
             </Switch>
         </div>
       </BrowserRouter>
-
     );
   }
 }
