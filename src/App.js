@@ -33,7 +33,7 @@ class App extends Component {
                 <Route exact path = "/" render={()=><Container data={'nature'}/>} />
                 <Route path = "/cats" render={()=><Container data={'cats'}/>} />
                 <Route path = "/dogs" render={()=><Container data={'dogs'}/>} />
-                <Route path = "/computers" render={()=><Container data={'computers'}/>} />
+                <Route path = "/cars" render={()=><Container data={'cars'}/>} />
                 <Route path = "/Search" render={()=><SearchForm/>} />
                 <Notfound/>
             </Switch>

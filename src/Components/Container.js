@@ -6,12 +6,11 @@ import PhotoContainer from './PhotoContainer.js';
 
 
 
+
 export default class Container extends Component {
 
   constructor(props){
     super(props);
-
-
     this.state = {
       pics:[],
 
@@ -24,7 +23,6 @@ makeApiCall=(tag)=>{
     .then(response=> {
       var urlArray = response.data.photos.photo.map(pic=>`https://farm${pic.farm}.staticflickr.com/${pic.server}/${pic.id}_${pic.secret}.jpg`);
       // console.log(urlArray);
-
       this.setState({
         pics: urlArray,
       });
@@ -36,7 +34,6 @@ makeApiCall=(tag)=>{
 }
 
 componentWillMount(props){
-
   var tag = this.props.data;
   this.makeApiCall(tag);
 }
@@ -48,9 +45,12 @@ componentWillReceiveProps(nextProps){
  }
 
 render(){
+
+
     return(
       <PhotoContainer data={this.state.pics}/>
-    );
-  }
+      );
+    }
+  
 
 }
