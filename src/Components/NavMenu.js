@@ -7,6 +7,8 @@ const NavMenu = props =>
         <li><Link to="/cats">Cats</Link></li>
         <li><Link to="/dogs">Dogs</Link></li>
         <li><Link to="/cars">Cars</Link></li>
+      </ul>
+      <ul>
         <li><Link to="/search">Search</Link></li>
       </ul>
     </nav>
